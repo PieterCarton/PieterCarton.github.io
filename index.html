@@ -1,0 +1,26 @@
+<p id="acc-info"></p>
+
+<script src="RosSensorLib.js"></script>
+<script>
+    console.log('Hello World!');
+
+    console.log('Can we access library?');
+
+    if (SENSORLIB === undefined) {
+        console.log('no');
+    } else {
+        console.log('yes');
+    }
+
+    console.log('Can we access library components?');
+    if (SENSORLIB.TestSensor === undefined) {
+        console.log('no');
+    } else {
+        console.log('yes');
+    }
+
+    let testSensor = new SENSORLIB.TestSensor("topic", "test");
+
+    console.log(testSensor);
+    console.log(testSensor.sensor);
+</script>
